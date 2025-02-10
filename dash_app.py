@@ -48,10 +48,6 @@ print(df.head())
 df.to_csv("./sample_data/supermarket_sales_cleaned.csv", index=False)
 
 
-!pip install dash plotly pandas dash-bootstrap-components pyngrok
-
-!pip install pyngrok
-!ngrok authtoken 2sp7CTFcCQf1h78MSM8vuEV7BlY_7nZPaN5G3PMg3PZpAKHbP
 #NO EJECUTAR ESTE CODIGO ESTA CON EL PASS NO SOBRESCRIBIR
 
 from pyngrok import ngrok
