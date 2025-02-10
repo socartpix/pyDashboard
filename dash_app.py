@@ -70,12 +70,11 @@ public_url = ngrok.connect(8050).public_url
 print(f"✅ Dashboard disponible en: {public_url}")
 
 print("✅ Todos los túneles de ngrok han sido cerrados. Ahora puedes iniciar uno nuevo.")
-
 import pandas as pd
 from dash import Dash, html, dcc, Output, Input, dash_table
 import plotly.express as px
-from pyngrok import ngrok
-import dash_bootstrap_components as dbc
+import dash_bootstrap_components as dbc  # Mover a una línea separada
+
 
 # Cargar el archivo limpio
 file_path = "./sample_data/supermarket_sales_cleaned.csv"
