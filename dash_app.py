@@ -50,7 +50,7 @@ df.to_csv("./sample_data/supermarket_sales_cleaned.csv", index=False)
 
 #NO EJECUTAR ESTE CODIGO ESTA CON EL PASS NO SOBRESCRIBIR
 
-from pyngrok import ngrok
+
 
 # Abrir un túnel en el puerto 8050
 public_url = ngrok.connect(8050).public_url
@@ -59,7 +59,6 @@ print(f"✅ Dashboard disponible en: {public_url}")
 
 #Si necesitas limpiar los puertos solo permite maximo 3
 
-from pyngrok import ngrok
 
 # Cerrar todos los túneles activos
 for tunnel in ngrok.get_tunnels():
