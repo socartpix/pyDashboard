@@ -53,23 +53,20 @@ df.to_csv("./sample_data/supermarket_sales_cleaned.csv", index=False)
 
 
 # Abrir un túnel en el puerto 8050
-public_url = ngrok.connect(8050).public_url
-print(f"✅ Dashboard disponible en: {public_url}")
-
 
 #Si necesitas limpiar los puertos solo permite maximo 3
 
 
 # Cerrar todos los túneles activos
-for tunnel in ngrok.get_tunnels():
-    ngrok.disconnect(tunnel.public_url)
+#for tunnel in ngrok.get_tunnels():
+ #   ngrok.disconnect(tunnel.public_url)
 
     # volviendo a activar todo
     # Abrir un túnel en el puerto 8050
-public_url = ngrok.connect(8050).public_url
-print(f"✅ Dashboard disponible en: {public_url}")
+#public_url = ngrok.connect(8050).public_url
+#print(f"✅ Dashboard disponible en: {public_url}")
 
-print("✅ Todos los túneles de ngrok han sido cerrados. Ahora puedes iniciar uno nuevo.")
+#print("✅ Todos los túneles de ngrok han sido cerrados. Ahora puedes iniciar uno nuevo.")
 import pandas as pd
 from dash import Dash, html, dcc, Output, Input, dash_table
 import plotly.express as px
@@ -217,8 +214,6 @@ def update_graphs(selected_product, selected_branch):
     return sales_fig, hour_hist_fig, scatter_fig, payment_fig, branch_fig, customer_fig, rating_fig, table_data
 
 # **Configurar ngrok para exponer el servidor**
-public_url = ngrok.connect(8050).public_url
-print(f"Dashboard disponible en: {public_url}")
 
 # Ejecutar la aplicación en modo debug
 app.run_server(mode="external")
